@@ -1,0 +1,15 @@
+current directory: /Users/terakensmac/Documents/rails/matching_app/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+/Users/terakensmac/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20180608-20454-1kvmcuv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/terakensmac/Documents/rails/matching_app/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/terakensmac/Documents/rails/matching_app/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/terakensmac/Documents/rails/matching_app/vendor/bundle/gems/websocket-driver-0.7.0/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20180608-20454-syou8

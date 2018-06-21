@@ -1,0 +1,15 @@
+<div>
+  <header>
+    <ul>
+      <li>
+        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+      </li>
+    </ul>
+  </header>
+  <% @users.each do |user| %>
+    <div>
+      <%= link_to(user.name, "/users/#{user.id}") %>
+    </div>
+  <% end %>
+</div>
+

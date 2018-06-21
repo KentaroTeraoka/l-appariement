@@ -1,0 +1,213 @@
+
+<body id="top">
+<div id="wrapper">
+
+  <div id="sidebar">
+    <div id="sidebarWrap">
+      <h1>
+        <img src="/logo.png" width="110" height="30" alt="logo">
+      </h1>
+      <nav id="mainnav">
+        <p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+        <div class="panel">
+          <ul>
+            <li><a href="#top">TOP</a></li>
+            <li><a href="#sec01">ABOUT</a></li>
+            <li><a href="#sec02">SCREEN SHOT</a></li>
+            <li><a href="#sec03">FEATURE</a></li>
+<!--            <li><a href="#sec04">PROJECT</a></li>-->
+            <li><a href="#sec05">DEVELOPER</a></li>
+          </ul>
+          <ul id="sns">
+            <li><a href="#" target="_blank"><img src="images/iconFb.png" width="20" height="20" alt="FB"></a></li>
+            <li><a href="#" target="_blank"><img src="images/iconTw.png" width="20" height="20" alt="twitter"></a></li>
+            <li><a href="#" target="_blank"><img src="images/iconInsta.png" width="20" height="20" alt="Instagram"></a></li>
+            <li><a href="#" target="_blank"><img src="images/iconYouTube.png" width="20" height="20" alt="You Tube"></a></li>
+          </ul>
+          <ul>
+            <li>
+              <div id="login-show"><a>ログイン</a></div>
+            </li>
+            <li>
+              <div id="signup-show"><a>新規登録</a></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+  <div id="content">
+
+    <!--  LOGIN MDOAL-->
+    <div id="login-modal-main">
+      <div id="login-modal" class="login-modal-wrapper">
+        <div class="modal">
+          <div class="close-modal">
+            <i class="fa fa-2x fa-times"></i>
+          </div>
+          <div id="login-form">
+            <h2>IDログイン</h2>
+            <%= form_tag("/login") do%>
+              <form action="#">
+                <input class="form-control" type="text" name="user_id" placeholder="ID">
+                <input class="form-control" type="password" name="password" placeholder="パスワード">
+                <input class="submit-btn" type="submit" value="ログイン">
+              </form>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  //LOGIN MODAL-->
+    <!--    SIGNUP MODAL-->
+    <div id="signup-modal-main">
+      <div id="signup-modal" class="signup-modal-wrapper">
+        <div class="modal">
+          <div class="close-modal">
+            <i class="fa fa-2x fa-times"></i>
+          </div>
+          <div id="signup-form">
+            <h2>IDで新規登録</h2>
+            <%= form_tag("/users/create") do %>
+              <form action="#">
+                <input class="form-control" type="text" name="name" value="<%= @user.name %>" placeholder="ユーザー名">
+                <input class="form-control" type="text" name="user_id" value="<%= @user.user_id %>" placeholder="ID">
+                <input class="form-control" type="radio" name="sex" value="male">男性
+                <input class="form-control" type="radio" name="sex" value="female">女性
+                <input class="form-control" type="password" name="password" value="<%= @user.password %>" placeholder="パスワード">
+                <input class="submit-btn" type="submit" value="新規登録">
+              </form>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// SIGNUP MODAL-->
+
+    <div id="mainImg">
+      <div id="mainLogo">
+        <p>
+          <%=link_to("L'APPARIEMENT","/", {:id=>"logoLink", :target=>"_blank"})%>
+        </p>
+        <img src="/mainImg.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="sec01">
+      <header>
+        <h2><span>ABOUT</span></h2>
+      </header>
+      <div id="aboutLogo">
+        <img src="/logo.png" alt="">
+      </div>
+      <h3>いらっしゃいませ。</h3>
+      <div class="innerS">
+        "L'APPARIEMENT"とは仏語でマッチング的な意味を指します。かっこいいでしょ？私はそうは思いません。そしてこのアプリケーションはホンモノのマッチングアプリではなく、てらけんの作ったおもちゃアプリです。ちょっとでも異性との出会いを期待したお客様はブラウザバッグを推奨します。お遊び感覚でご利用くださいませ。
+      </div>
+    </section>
+    <!-- // ABOUT -->
+    <!-- SCREEN SHOT -->
+    <section id="sec02">
+      <header>
+        <h2><span>SCREEN SHOT</span></h2>
+      </header>
+      <ul id="gallery">
+        <li><img src="images/photo01.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo02.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo03.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo04.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo05.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo06.jpg" width="360" height="350" alt=""></li>
+        <li class="full"><img src="images/photo07.jpg" width="1080" height="695" alt=""></li>
+        <li><img src="images/photo08.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo09.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo10.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo11.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo12.jpg" width="360" height="350" alt=""></li>
+        <li><img src="images/photo13.jpg" width="360" height="350" alt=""></li>
+      </ul>
+    </section>
+    <!-- // SCREEN SHOT -->
+    <!-- FEATURE -->
+    <section id="sec03">
+      <header>
+        <h2><span>FEATURE</span></h2>
+      </header>
+      <div class="inner">
+        <ul class="col4">
+          <li>
+            <p class="img"><img src="images/logo01.png" width="168" height="168" alt=""></p>
+            <p>ホームページサンプル株式会社では最動かす企業を目指します。</p>
+          </li>
+          <li>
+            <p class="img"><img src="images/logo02.png" width="168" height="168" alt=""></p>
+            <p>革新的な技術で世の中を動かす企業を目します。世の中を動かす。</p>
+          </li>
+          <li>
+            <p class="img"><img src="images/logo03.png" width="168" height="168" alt=""></p>
+            <p>株式会社では最動かす企業を目指しますージン企業を目指します。</p>
+          </li>
+          <li>
+            <p class="img"><img src="images/logo04.png" width="168" height="168" alt=""></p>
+            <p>株式会社では最動かす企業を指しますージサン企業を目指します。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- // FEATURE -->
+<!--    <!-- PROJECT -->
+<!--    <section id="sec04">-->
+<!--      <header>-->
+<!--        <h2><span>PROJECT</span></h2>-->
+<!--      </header>-->
+<!--      <div class="inner">-->
+<!--        <div class="article">-->
+<!--          <img src="images/photo14.jpg" width="370" height="224" alt="">-->
+<!--          <p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な革新的な革新的な技術で世の中を技術で世の中を技術で世の中を動かす企業を目指します。</p>-->
+<!--          <p>ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指し調和を目指し調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>-->
+<!--        </div>-->
+<!--        <div class="article">-->
+<!--          <img src="images/photo15.jpg" width="370" height="224" alt="">-->
+<!--          <p>ホームページサンプル株式会社では最新技術と自然との調和を目指します。革新的な革新的な革新的な技術で世の中を技術で世の中を技術で世の中を動かす企業を目指します。</p>-->
+<!--          <p>ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指します。革新的な技術で世の中を動かす企業を目指します。ホームページサンプル株式会社。ホームページサンプル最新技術と自然との調和を目指し調和を目指し調和を目指します。革新的な技術で世の中を動かす企業を目指します。</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <!-- // PROJECT -->
+    <!-- DEVELOPER -->
+    <section id="sec05">
+      <header>
+        <h2><span>DEVELOPER</span></h2>
+      </header>
+      <div class="inner">
+        <ul class="col2">
+          <li>
+            <p>〒103-1234<br>見本県見本市仮区見本町1-3-5</p>
+            <p>TEL 01234-567-8901</p>
+            <p>e-Mail info@example.com</p>
+            <p>営業時間 10:00〜20:00（水曜定休）</p>
+            <p>※都合により休業する場合がございます</p>
+          </li>
+          <li>
+            <div id="map">
+              <!-- GOOGLE MAP -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.5937927089367!2d136.92980931491988!3d36.70829797996758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff781ec5af4ca3f%3A0x2ade3e8e4c2801b8!2z56aP5bKh6aeF!5e0!3m2!1sja!2sus!4v1478313402186" allowfullscreen></iframe>
+              <!-- // GOOGLE MAP -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- // DEVELOPER -->
+
+    <footer id="footer">
+      Copyright(c) 2016 Sample Inc. All Rights Reserved. Design by <a href="http://f-tpl.com" target="_blank">http://f-tpl.com</a><!-- ←クレジット表記を外す場合はシリアルキーが必要です http://f-tpl.com/credit/ -->
+    </footer>
+
+  </div>
+</div>
+
+</body>
